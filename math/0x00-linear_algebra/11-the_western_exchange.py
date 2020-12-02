@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-module
+np_transpose
 """
-import numpy as np
 
 
 def np_transpose(matrix):
     """
-    function
+    np_transpose
     """
+    import numpy as np
     return np.transpose(matrix)
