@@ -3,6 +3,7 @@
 9-sum_total.py
 """
 
+
 def summation_i_squared(n):
     """
     9-summation_i_squared.py
