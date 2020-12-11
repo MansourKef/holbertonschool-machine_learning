@@ -8,7 +8,7 @@ def poly_integral(poly, C=0):
     """
     poly_integral
     """
-    if type(poly) != list or len(poly) == 0 or (type(C) != int and type(C) != float):
+    if type(poly) != list or len(poly) == 0 or not isinstance(C, int):
         return None
     result = [C]
     for i in range(0, len(poly)):
