@@ -8,7 +8,7 @@ def poly_derivative(poly):
     """
     poly_derivative
     """
-    if len(poly) == 0:
+    if type(poly) != list or len(poly) == 0:
         return None
 
     if len(poly) == 1:
