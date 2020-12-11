@@ -11,6 +11,8 @@ def poly_integral(poly, C=0):
     if type(poly) != list or len(poly) == 0 or type(C) != int:
         return None
     result = [C]
+    if len(poly) == 0:
+        return result
     for i in range(0, len(poly)):
         add = poly[i] / (i+1)
         if add.is_integer():
