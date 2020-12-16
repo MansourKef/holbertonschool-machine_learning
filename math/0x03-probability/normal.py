@@ -24,8 +24,8 @@ class Normal:
             self.mean = sum(data) / len(data)
             s = 0
             for i in range(0, len(data)):
-                s += ((data[i] - self.mean)) ** 2
-            self.stddev = (s / len(data)) ** (1 / 2)
+                s += ((data[i] - self.mean))**2
+            self.stddev = (s/len(data))**(1/2)
 
     def z_score(self, x):
         """z_score"""
@@ -37,7 +37,7 @@ class Normal:
 
     def pdf(self, x):
         """pdf"""
-        return (2.7182818285**((-1 / 2) * (((
+        return (2.7182818285**((-1/2) * (((
             x - self.mean) / self.stddev)**2))) * (
             1 / (self.stddev * (2 * 3.1415926536)**(1 / 2)))
 
