@@ -37,8 +37,8 @@ class Normal:
 
     def pdf(self, x):
         """pdf"""
-        return (2.7182818285 ** ((-1 / 2) * (((
-            x - self.mean) / self.stddev) ** 2))) * (
+        return (2.7182818285**((-1 / 2) * (((
+            x - self.mean) / self.stddev)**2))) * (
             1 / (self.stddev * (2 * 3.1415926536)**(1 / 2)))
 
     def cdf(self, x):
