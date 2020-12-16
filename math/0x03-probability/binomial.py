@@ -28,3 +28,23 @@ class Binomial:
                 P = 1 - (var_x / ux)
                 self.n = int(round(ux / P))
                 self.p = float(ux / self.n)
+
+    def pmf(self, k):
+        """pmf"""
+        if type(k) != int:
+            k = int(k)
+            if k < 0:
+                return 0
+            factorial_k = 1
+            factorial_n = 1
+            n = self.n
+            factorial_n_k = 1
+            if k != 0:
+                for i in range(1, k + 1):
+                    factorial_k = factorial_k * i
+            for j in range(1, n + 1):
+                factorial_n = factorial_n * j
+            for l in range(1, n - k + 1):
+                factorial_n_k = factorial_n_k * l
+            return (factorial_n / (factorial_k * factorial_n_k)) * (
+                self.p**k) * ((1 - self.p)**(self.n - k))
