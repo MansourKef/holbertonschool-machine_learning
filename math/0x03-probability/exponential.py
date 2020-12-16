@@ -5,7 +5,7 @@ exponential.py
 
 
 class Exponential:
-    """ 
+    """
     Exponential
     """
     def __init__(self, data=None, lambtha=1.):
