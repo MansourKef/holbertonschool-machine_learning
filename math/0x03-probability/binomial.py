@@ -32,7 +32,7 @@ class Binomial:
                 self.p = float(ux / self.n)
 
     def pmf(self, k):
-        """pmf"""
+        """doc for pmf function"""
         if type(k) != int:
             k = int(k)
         if k < 0:
@@ -52,7 +52,7 @@ class Binomial:
             self.p**k) * ((1 - self.p)**(self.n - k))
 
     def cdf(self, k):
-        """cdf"""
+        """doc for cdf function"""
         if type(k) != int:
             k = int(k)
         if k < 0:
