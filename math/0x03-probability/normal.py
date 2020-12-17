@@ -29,21 +29,21 @@ class Normal:
                 self.stddev = (s/len(data))**(1/2)
 
     def z_score(self, x):
-        """z_score"""
+        """doc for z_score function"""
         return ((x - self.mean) / self.stddev)
 
     def x_value(self, z):
-        """x_value"""
+        """doc for x_value function"""
         return self.stddev * z + self.mean
 
     def pdf(self, x):
-        """pdf"""
+        """doc for pdf function"""
         return (2.7182818285**((-1/2) * (((
             x - self.mean) / self.stddev)**2))) * (
             1 / (self.stddev * (2 * 3.1415926536) ** (1/2)))
 
     def cdf(self, x):
-        """cdf"""
+        """doc for cdf function"""
         X = (x - self.mean) / (self.stddev * (2**(1/2)))
         erf = (2 / (3.1415926536**(1/2))) * (X - (X**3)/3 + (
             X**5)/10 - (X**7)/42 + (X**9)/216)
