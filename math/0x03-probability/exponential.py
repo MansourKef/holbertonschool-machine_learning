@@ -25,7 +25,7 @@ class Exponential:
 
     def pdf(self, x):
         """
-        pdf
+        documentation of pdf function
         """
         if x < 0:
             return 0
@@ -33,7 +33,7 @@ class Exponential:
                 (2.7182818285 ** (-(self.lambtha) * x)))
 
     def cdf(self, x):
-        """cdf"""
+        """doc of cdf fucntion"""
         if x < 0:
             return 0
         return 1 - (2.7182818285 ** (-(self.lambtha * x)))
