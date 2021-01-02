@@ -18,16 +18,16 @@ class Neuron:
         self.__A = 0
 
     @property
-    def get__W(self):
+    def W(self):
         """Get Function"""
         return self.__W
 
     @property
-    def get__b(self):
+    def b(self):
         """Get Function"""
         return self.__b
 
     @property
-    def get__A(self):
+    def A(self):
         """Get Function"""
         return self.__A
