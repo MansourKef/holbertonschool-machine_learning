@@ -17,23 +17,23 @@ class Neuron:
         self.__b = 0
         self.__A = 0
 
-        @property
-        def W(self):
-            """Get Function"""
-            return self.__W
+    @property
+    def W(self):
+        """Get Function"""
+        return self.__W
 
-        @property
-        def b(self):
-            """Get Function"""
-            return self.__b
+    @property
+    def b(self):
+        """Get Function"""
+        return self.__b
 
-        @property
-        def A(self):
-            """Get Function"""
-            return self.__A
+    @property
+    def A(self):
+        """Get Function"""
+        return self.__A
 
-        def forward_prop(self, X):
-            """forward_prop Function"""
-            Z = np.matmul(self.__W, X) + self.__b
-            self.__A = 1.0 / (1.0 + np.exp(-Z))
-            return self.__A
+    def forward_prop(self, X):
+        """forward_prop Function"""
+        Z = np.matmul(self.__W, X) + self.__b
+        self.__A = 1.0 / (1.0 + np.exp(-Z))
+        return self.__A
