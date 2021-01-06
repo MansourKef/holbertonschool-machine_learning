@@ -5,6 +5,11 @@
 import numpy as np
 
 
+def sigmoid(Z):
+    """function"""
+    return 1/(1 + np.exp(-Z))
+
+
 class NeuralNetwork:
     """class"""
     def __init__(self, nx, nodes):
