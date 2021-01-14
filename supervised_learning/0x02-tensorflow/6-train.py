@@ -10,7 +10,8 @@ forward_prop = __import__('2-forward_prop').forward_prop
 
 
 def train(X_train, Y_train, X_valid,
-          pha, iterations, save_path="/tmp/model.ckpt"):
+          Y_valid, layer_sizes, activation,
+          alpha, iterations, save_path="/tmp/model.ckpt"):
     """return path to saved model"""
     x, y = create_placeholders(X_train.shape[1], Y_train.shape[1])
     y_pred = forward_prop(x, layer_sizes, activations)
