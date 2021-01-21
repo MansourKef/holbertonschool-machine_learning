@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""mod"""
+"""module"""
 
 import numpy as np
 
@@ -16,5 +16,5 @@ def l2_reg_gradient_descent(Y, weights, cache, alpha, lambtha, L):
             Y[0]) * lambtha * weights[w]
         db = (1 / len(Y[0])) * np.sum(dz, axis=1, keepdims=True)
         weights[w] = weights[w] - alpha * dw
-        eights[b] = weights[b] - alpha * db
+        weights[b] = weights[b] - alpha * db
         dz = np.matmul(weights_copy["W" + str(i)].T, dz) * (1 - A * A)
