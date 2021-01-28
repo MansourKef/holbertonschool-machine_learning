@@ -1,4 +1,4 @@
-!/usr/bin/env python3
+#!/usr/bin/env python3
 """performs convolution of images with channels"""
 
 import numpy as np
