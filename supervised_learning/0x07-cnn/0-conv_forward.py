@@ -6,7 +6,7 @@ import numpy as np
 
 
 def conv_forward(A_prev, W, b, activation, padding="same",
-                stride=(1, 1)):
+                 stride=(1, 1)):
     """function"""
     m, h_prev, w_prev, c_prev = A_prev.shape
     kh, kw = W.shape[0], W.shape[1]
