@@ -28,5 +28,5 @@ def conv_backward(dZ, A_prev, W, b, padding="same", stride=(1, 1)):
                     W[:, :, :, k]*reshZ
                 A = A_prev[:, i*sh: i*sh + kh, j*sw: j*sw + kw, :]
                 dW[:, :, :, k] += np.sum(A*reshZ, axis=0)
-                db[:, :, :, k] += dZ[:, :, :, k]
+                db[:, :, :, k] += dZ[:, i, j, k]
     return dA_prev, dW, db
