@@ -10,7 +10,7 @@ def identity_block(A_prev, filters):
     weights = K.initializers.he_normal()
     F11, F3, F12 = filters
     conv1 = K.layers.Conv2D(F11, kernel_size=1,
-                            initializer=weights,
+                            kernel_initializer=weights,
                             padding='same')(A_prev)
     BN1 = K.layers.BatchNormalization()(conv1)
     relu1 = K.layers.Activation('relu')(BN1)
