@@ -36,19 +36,19 @@ class NST:
         self.alpha = alpha
         self.beta = beta
 
-        @staticmethod
-        def scale_image(image):
-            """scale image"""
-            if not isinstance(image, np.ndarray) or \
-               len(image.shape) != 3 or \
-               image.shape[2] != 3:
-                raise TypeError(
-                    "image must be a numpy.ndarray with shape (h, w, 3)")
-            height = image.shape[0]
-            width = image.shape[1]
-            scale = 512 / max(height, width)
-            new_shape = (int(scale * height), int(scale * width))
-            image = np.expand_dims(image, axis=0)
-            image_scaled = tf.clip_by_value(tf.image.resize_bicubic
-                                            (image, new_shape) / 255.0, 0.0, 1.0)
-            return image_scaled
+    @staticmethod
+    def scale_image(image):
+        """scale image"""
+        if not isinstance(image, np.ndarray) or \
+           len(image.shape) != 3 or \
+           image.shape[2] != 3:
+            raise TypeError(
+                "image must be a numpy.ndarray with shape (h, w, 3)")
+        height = image.shape[0]
+        width = image.shape[1]
+        scale = 512 / max(height, width)
+        new_shape = (int(scale * height), int(scale * width))
+        image = np.expand_dims(image, axis=0)
+        image_scaled = tf.clip_by_value(tf.image.resize_bicubic
+                                        (image, new_shape) / 255.0, 0.0, 1.0)
+        return image_scaled
