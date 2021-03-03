@@ -41,12 +41,12 @@ class NST:
             len(image.shape) != 3 or image.shape[2] != 3):
             msg = "image must be a numpy.ndarray with shape (h, w, 3)"
             raise TypeError(msg)
-         new_h = 512
-         new_w = 512
-         if image.shape[0] > image.shape[1]:
-             new_w = int(image.shape[1] * 512 / image.shape[0])
-         elif image.shape[0] < image.shape[1]:
-             new_h = int(image.shape[0] * 512 / image.shape[1])
+        new_h = 512
+        new_w = 512
+        if image.shape[0] > image.shape[1]:
+            new_w = int(image.shape[1] * 512 / image.shape[0])
+        elif image.shape[0] < image.shape[1]:
+            new_h = int(image.shape[0] * 512 / image.shape[1])
         mth = tf.image.ResizeMethod.BICUBIC
         image = tf.expand_dims(image, 0)
         image = tf.image.resize_bicubic(image, (new_h, new_w),
